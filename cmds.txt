@@ -1,0 +1,665 @@
+    1  exit
+    2  exit
+    3  lab-configure
+    4  read -p "pass: " -s pass
+    5  $pass
+    6  oc login -u petronela-cretu -p pass
+    7  oc login -u petronela-cretu -p $pass
+    8  oc console --help
+    9  oc --help
+   10  oc cluster-info
+   11  oc completion --help
+   12  source <(oc completion bash)
+   13  oc cluster-info --help
+   14  oc cluster-info
+   15  oc --help
+   16  clear
+   17  oc get all
+   18  clear
+   19  oc new-project myproject
+   20  oc describe myproject
+   21  oc describeproject  myproject
+   22  oc describe project  myproject
+   23  oc new-project myosproject
+   24  oc get all
+   25  oc describe project myosproject
+   26  https://console-openshift-console/${RHT_OCP4_WILDCARD_DOMAIN}
+   27  ${RHT_OCP4_WILDCARD_DOMAIN}
+   28  echo
+   29  echo ${RHT_OCP4_WILDCARD_DOMAIN}
+   30  find / -name "*config" 2>/dev/nul
+   31  find / -name "*config" 2>/dev/null
+   32  source /usr/local/etc/ocp4.config
+   33  echo ${RHT_OCP4_WILDCARD_DOMAIN}
+   34  echo $pass
+   35  ls
+   36  oc get all
+   37  echo $pass
+   38  read -p "pass: " -s pass
+   39  $pass
+   40  oc login -u petronela-cretu -p $pass
+   41  oc get all
+   42  oc delete all --all
+   43  s2i
+   44  s2i build --help
+   45  s2i build https://github.com/openshift/ruby-hello-world centos/ruby-22-centos7 hello-world-app
+   46  oc new-app --help
+   47  oc get is
+   48  oc get -n openshift is
+   49  oc new-app --as-deployment-config -i php:7.3 https://github.com/RedHatTraining/DO288-apps/php-helloworld
+   50  podman image --help
+   51  sudo podman image --help
+   52  sudo podman pull httpd
+   53  sudp podman search httpd
+   54  sudo podman pull default-route-openshift-image-registry.apps.eu45.prod.nextcle.com/opens 2.4
+   55  sudo podman search php
+   56  sudo podman pull php-73
+   57  sudo podman image --help
+   58  sudo podman image pull php-73
+   59  sudo podman image pull php-7.3
+   60  sudo podman pull registry.access.redhat.com/ubi8/php-73
+   61  find / -name "*s2i*" 2>/dev/null
+   62  cd /usr/bin/s2i
+   63  file /usr/bin/s2i
+   64  vim /usr/bin/s2i
+   65  sudo podman images
+   66  sudo podman inspect registry.access.redhat.com/ubi8/php-73
+   67  oc patch --help
+   68  oc bc describe
+   69  oc describebc
+   70  oc describe bc
+   71  oc explain bc
+   72  oc explain bc -r
+   73  oc explain bc --recursive
+   74  oc explain bc --recursive | grep "secretKeyRef"
+   75  oc explain bc --recursive > bc.yaml
+   76  vim bc.yaml 
+   77  python
+   78  python3
+   79  python
+   80  sudo podman run -it python:3.8
+   81  sudo podman search python
+   82  sudo podman run -it registry.access.redhat.com/ubi7/python-38
+   83  sudo podman ps
+   84  sudo podman --help
+   85  sudo podman containers
+   86  sudo podman container
+   87  sudo podman run --help
+   88  podman ps
+   89  sudo podman ps
+   90  sudo podman images
+   91  sudo podman search python
+   92  sudo podman run -it --name python3 registry.access.redhat.com/rhscl/python-36-rhel7 /bin/bash
+   93  sudo podman ps
+   94  sudo podman containers
+   95  podman ps
+   96  sudo podman ps --all
+   97  sudo podman start python3
+   98  sudo podman start python3 /bin/bash
+   99  sudo podman start -it python3
+  100  sudo podman start --help
+  101  sudo podman start python3
+  102  sudo podman ps --all
+  103  sudo podman run -it python3 /bin/bash
+  104  sudo podman exec -it python3 /bin/bash
+  105  yum install python
+  106  shutdown
+  107  power off
+  108  poweroff
+  109  lab-config
+  110  lab-configure
+  111  read -p "pass: " -s pass
+  112  $pass
+  113  oc login -u petronela-cretu -p $pass
+  114  oc get all
+  115  man chown
+  116  ls
+  117  git clone https://github.com/PetronellaPC/DO288-apps
+  118  sudo podman images
+  119  sudo podman inspect registry.access.redhat.com/ubi7/python-38 
+  120  lab s2i-scripts start
+  121  sudo podman run --name test -it rhscl/httpd-24-rhel7 bash
+  122  man chmod
+  123  ls
+  124  cd DO288-apps/
+  125  ls
+  126  git status
+  127  git add .
+  128  git push origin master
+  129  cd s2i-scripts/
+  130  ls
+  131  cd -
+  132  ls -a
+  133  cd -
+  134  ls -a
+  135  cd .s2i
+  136  ls
+  137  ls -a
+  138  cd bin
+  139  ls
+  140  cat assemble 
+  141  $@
+  142  oc new-app --as-deployment-config --name blah httpd:2.4~https://github.com/PetronellaPC/DO288-apps --context-dir s2i-scripts
+  143  oc status
+  144  oc console
+  145  oc console --help
+  146  oc describe myosperoject
+  147  oc get all
+  148  oc describe myosproject
+  149  expose svc service/blah
+  150  oc expose svc service/blah
+  151  oc expose service/blah
+  152  oc describe route blah
+  153  curl http://https://api.eu45.prod.nextcle.com:6443
+  154  curl http://10.130.3.74:8080,
+  155  curl http://10.130.3.74:8080
+  156  curl http://10.130.3.74:8443
+  157  oc logs -f bc/blah
+  158  oc get route
+  159  ping blah-myosproject.apps.eu45.prod.nextcle.com
+  160  curl blah-myosproject.apps.eu45.prod.nextcle.com
+  161  curl 161.156.16.195
+  162  curl blah-myosproject.apps.eu45.prod.nextcle.com/info.html
+  163  oc get pods
+  164  oc logs --help
+  165  oc get pods
+  166  oc logs blah-1-tfwrf
+  167  lab-configure
+  168  read -p "pass: " -s pass
+  169  $pass
+  170  oc login -u petronela-cretu -p $pass
+  171  oc get all
+  172  sudo podman pods
+  173  sudo podman pod
+  174  sudo podman get pod
+  175  sudo podman get pods
+  176  sudo podman ps
+  177  sudo podman ps --all
+  178  sudo podman images
+  179  sudo podman --help
+  180  s2i create imgtest test
+  181  ls
+  182  tree test
+  183  cd test
+  184  ls -aR
+  185  ls -a
+  186  ll
+  187  ll -R
+  188  sudo podman build --help
+  189  oc
+  190  oc $(woami)
+  191  lab-configure
+  192  read -p "pass " -s pass
+  193  $pass
+  194  oc login -u petronela-cretu -p $pass
+  195  oc $(woami)
+  196  whoami
+  197  oc whoami
+  198  oc whoami token
+  199  oc token --help
+  200  TOKEN = $(oc whoami -t)
+  201  TOKEN=$(oc whoami -t)
+  202  $TOKEN
+  203  ls
+  204  s2i --help
+  205  cat test/Dockerfile 
+  206  vimtutor
+  207  lab-configure
+  208  read -p "kjf" -s pass
+  209  &pass
+  210  $pass
+  211  oc login -u petronela-cretu -p $pass
+  212  oc whoami --show-console
+  213  oc whoami --help
+  214  oc --help
+  215  ls
+  216  cd test
+  217  vim Dockerfile 
+  218  lab-configure
+  219  read -p "kjf" -s pass
+  220  &pass
+  221  $pass
+  222  oc login -u petronela-cretu -p $pass
+  223  oc whoami --show-console
+  224  oc whoami --help
+  225  oc --help
+  226  ls
+  227  cd test
+  228  vim Dockerfile 
+  229  sed --help
+  230  ls
+  231  vim test/Dockerfile 
+  232  ls
+  233  cd test
+  234  cd
+  235  ls
+  236  cd test
+  237  ls
+  238  cd test
+  239  ls
+  240  file run
+  241  cd
+  242  tree test
+  243  vim test/Dockerfile 
+  244  sudo podman images
+  245  docker
+  246  sudo podman images
+  247  docker history --no-trunc a47e9ad4d3f6
+  248  sudo podman history --no-trunc a47e9ad4d3f6
+  249  crc console --credentials
+  250  cr console --credentials
+  251  oc console --credentials
+  252  oc projects
+  253  cp --help
+  254  tree test
+  255  vim test/s2i/bin/assemble 
+  256  vim test/s2i/bin/run
+  257  sudo podman build -t test .
+  258  cd test
+  259  sudo podman build -t test .
+  260  cat Dockerfile 
+  261  cd
+  262  lab apache-s2i start
+  263  ls
+  264  mv --help
+  265  mv -Rf test DO288-apps/test_s2i
+  266  mv -f test DO288-apps/test_s2i
+  267  ls
+  268  cd DO288-apps/
+  269  ls
+  270  cd ..
+  271  cd DO288
+  272  ls
+  273  cd labs/
+  274  ls
+  275  cd 
+  276  lab apache-s2i start
+  277  cd DO288-apps/
+  278  git add .
+  279  git commit -m "added my files" 
+  280  git status
+  281  lab apache-s2i start
+  282  sed --help
+  283  s2i create s2i_httpd do288-s2i-httpd
+  284  ls
+  285  mv do288-s2i-httpd/ ~
+  286  ls
+  287  cd
+  288  ls
+  289  tree do288-s2i-httpd/
+  290  cp --help
+  291  cp DO288/labs/apache-s2i/ do288-s2i-httpd/
+  292  cp ~/DO288/labs/apache-s2i/ do288-s2i-httpd/
+  293  cp --help
+  294  cp -Rv DO288/labs/apache-s2i/ do288-s2i-httpd/
+  295  tree do288-s2i-httpd/
+  296  cd do288-s2i-httpd/
+  297  sudo podman build -i httpd_s2i
+  298  sudo podman build -t httpd_s2i .
+  299  sudo podman images
+  300  mkdir sample-app
+  301  s2i build --help
+  302  s2i build test/test-app/ httpd_s2i sample-app --as-dockerfile ~/sample-app/Dockerfile
+  303  cd
+  304  gedit sample-app/Dockerfile 
+  305  sudo podman build --format docker -t ~/sample-app
+  306  ls
+  307  cd sample-app/
+  308  sudo podman build --format docker -t sample-app
+  309  sudo podman build --format docker -t sample-app .
+  310  sudo podman images
+  311  sudo podman run --name test -u 1234 -p 8080:8080 -d sample-app
+  312  sudo podman run --name test2 -u 1234 -p 8080:8080 -d sample-app
+  313  sudo podman ps
+  314  curl http://localhost:8080
+  315  sudo podman stop test2
+  316  sudo podman login -u petronella quay.io
+  317  sudo skopeo copy containers-storage:localhost/httpd_s2i docker://quay.io/petronella/httpd_s2i
+  318  oc status
+  319  oc project --help
+  320  oc new-project s2i-project
+  321  oc project
+  322  sudo podman login -u petronella quay.io
+  323  oc create secret generic quayio  --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json  --type=kubernetes.io/dockerconfigjson
+  324  oc import-image httpd_s2i --from quay.io/petronella/httpd_s2i --confirm
+  325  podman images
+  326  sudo podman images
+  327  oc import-image httpd_s2i --from localhost/httpd_s2i --confirm
+  328  oc import-image -t httpd_s2i --from localhost/httpd_s2i --confirm
+  329  oc import-image
+  330  oc import-image --help
+  331  oc import-image httpd_s2i localhost/httpd_s2i --confirm
+  332  oc import-image --help
+  333  oc import-image httpd_s2i
+  334  oc import-image --help
+  335  oc import-image tag --help
+  336  oc import-image httpd_s2i --from quay.io/petronella/httpd_s2i --confirm --insecure
+  337  oc create secret generic quayio  --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json  --type=kubernetes.io/dockerconfigjson
+  338  find / "auth.json"
+  339  find / "auth.json" 2>/dev/null
+  340  find / -name "auth.json" 2>/dev/null
+  341  cd
+  342  find / -name "auth.json" 2>/dev/null
+  343  oc status
+  344  sudo podman images
+  345  oc new-app --as-deployment-config --name httpds2i httpd_s2i~https://github/PetronellaPC/DO288-apps --context-dir=html-helloworld
+  346  oc new-app --as-deployment-config --name httpds2i httpd_s2i~https://github/PetronellaPC/DO288-apps --context-dir=html-helloworld --allow-missingimagestream-tags
+  347  oc new-app --as-deployment-config --name httpds2i httpd_s2i~https://github/PetronellaPC/DO288-apps --context-dir=html-helloworld --allow-missing-imagestream-tags
+  348  history > cmds.txt
+  349  gedit cmds.txt
+  350  oc new-app --as-deployment-config --name httpds2i s2i httpd~https://github/PetronellaPC/DO288-apps --context-dir=html-helloworld --allow-missing-imagestream-tags
+  351  oc new-app --as-deployment-config --name httpds2i s2i_httpd~https://github/PetronellaPC/DO288-apps --context-dir=html-helloworld --allow-missing-imagestream-tags
+  352  oc describe s2i_httpd
+  353  gedit cmds.txt
+  354  oc get all
+  355  git status
+  356  cd DO288-apps/
+  357  git status
+  358  git add .
+  359  git commit -m "copy labs configs"
+  360  git push 
+  361  oc get templates -n openshift
+  362  lab configure
+  363  lab-configure
+  364  read -p "jhkj" -s pass
+  365  $pass
+  366  oc login -u petronela-cretu
+  367  oc get templates -n openshift
+  368  oc process --parameters -n openshift nodejs-monngodb-example
+  369  oc process --parameters -n openshift sso74-postgresql-persistent 
+  370  oc describe sso74-postgresql-persistent 
+  371  oc describe template sso74-postgresql-persistent
+  372  oc edit template sso74-postgresql-persistent
+  373  oc edit sso74-postgresql-persistent
+  374  oc create  --dry-run sso74-postgresql-persistent
+  375  oc get template sso74-postgresql-persistent -o yaml -n openshift
+  376  oc get template sso74-postgresql-persistent -o yaml -n openshift > templ.yaml
+  377  cat templ.yaml 
+  378  oc describe template sso74-postgresql-persistent -n openshift
+  379  oc describe --help
+  380  oc get --help
+  381  oc get -o yaml --export is,bc,dc,svc,route > mytemplate.yaml
+  382  gedit mytemplate.yaml 
+  383  vim mytemplate.yaml 
+  384  rm mytemplate.yaml 
+  385  oc get -o yaml --export is,bc,dc,svc,route > mytemplate.yaml
+  386  rm mytemplate.yaml 
+  387  oc get -o yaml --export is,bc,dc,svc,route > mytemplate.yaml
+  388  vim mytemplate.yaml 
+  389  oc delete all --all
+  390  sudo podman --help
+  391  sudo podman stop --help
+  392  sudo podman stop --ll
+  393  sudo podman stop --all
+  394  sudo podman --help
+  395  sudo podman rm --all
+  396  oc status
+  397  lab ccreate-template start
+  398  lab create-template start
+  399  os status
+  400  oc status
+  401  oc projects
+  402  oc project petronela-cretu-quotes-dev 
+  403  oc status
+  404  oc status --suggest
+  405  oc get pvc
+  406  ls
+  407  cd /
+  408  ls
+  409  cd home
+  410  ls
+  411  cd student/
+  412  ls
+  413  vim quotes-template-clean.yaml
+  414  tree Templates/
+  415  mkdir generated
+  416  oc get -o yaml --export is > generated/genis.yaml
+  417  oc get -o yaml --export bc > generated/genbc.yaml
+  418  oc get -o yaml --export dc > generated/gendc.yaml
+  419  oc get -o yaml --export svc > generated/gensvc.yaml
+  420  oc get -o yaml --export route > generated/genroute.yaml
+  421  oc get -o yaml --export pvc > generated/genpvc.yaml
+  422  oc get -o yaml --export is,bc,dc,svc,route,pvc > generated/gen.yaml
+  423  vim generated/gen.yaml 
+  424  cd DO288/solutions/create-template/
+  425  ls
+  426  vim quotes-template-clean.yaml 
+  427  oc get templates -n openshift
+  428  lab configure
+  429  lab-configure
+  430  read -p "jhkj" -s pass
+  431  $pass
+  432  oc login -u petronela-cretu
+  433  oc get templates -n openshift
+  434  oc process --parameters -n openshift nodejs-monngodb-example
+  435  oc process --parameters -n openshift sso74-postgresql-persistent 
+  436  oc describe sso74-postgresql-persistent 
+  437  oc describe template sso74-postgresql-persistent
+  438  oc edit template sso74-postgresql-persistent
+  439  oc edit sso74-postgresql-persistent
+  440  oc create  --dry-run sso74-postgresql-persistent
+  441  oc get template sso74-postgresql-persistent -o yaml -n openshift
+  442  oc get template sso74-postgresql-persistent -o yaml -n openshift > templ.yaml
+  443  cat templ.yaml 
+  444  oc describe template sso74-postgresql-persistent -n openshift
+  445  oc describe --help
+  446  oc get --help
+  447  oc get -o yaml --export is,bc,dc,svc,route > mytemplate.yaml
+  448  gedit mytemplate.yaml 
+  449  vim mytemplate.yaml 
+  450  rm mytemplate.yaml 
+  451  oc get -o yaml --export is,bc,dc,svc,route > mytemplate.yaml
+  452  rm mytemplate.yaml 
+  453  oc get -o yaml --export is,bc,dc,svc,route > mytemplate.yaml
+  454  vim mytemplate.yaml 
+  455  oc delete all --all
+  456  sudo podman --help
+  457  sudo podman stop --help
+  458  sudo podman stop --ll
+  459  sudo podman stop --all
+  460  sudo podman --help
+  461  sudo podman rm --all
+  462  oc status
+  463  lab ccreate-template start
+  464  lab create-template start
+  465  os status
+  466  oc status
+  467  oc projects
+  468  oc project petronela-cretu-quotes-dev 
+  469  oc status
+  470  oc status --suggest
+  471  oc get pvc
+  472  ls
+  473  cd /
+  474  ls
+  475  cd home
+  476  ls
+  477  cd student/
+  478  ls
+  479  vim quotes-template-clean.yaml
+  480  tree Templates/
+  481  mkdir generated
+  482  oc get -o yaml --export is > generated/genis.yaml
+  483  oc get -o yaml --export bc > generated/genbc.yaml
+  484  oc get -o yaml --export dc > generated/gendc.yaml
+  485  oc get -o yaml --export svc > generated/gensvc.yaml
+  486  oc get -o yaml --export route > generated/genroute.yaml
+  487  oc get -o yaml --export pvc > generated/genpvc.yaml
+  488  oc get -o yaml --export is,bc,dc,svc,route,pvc > generated/gen.yaml
+  489  vim generated/gen.yaml 
+  490  cd DO288/solutions/create-template/
+  491  ls
+  492  vim quotes-template-clean.yaml 
+  493  lab-configure
+  494  oc login -u petronela-cretu -p 858b83bb854842439a62
+  495  oc whoami --help
+  496  oc whoami --show-console
+  497  cd generated/
+  498  ls
+  499  cd
+  500  oc get -o yaml --export is,bc,dc,svc,route,pvc > generated/gen.yaml
+  501  cd generated/
+  502  cp gen.yaml gene.yaml
+  503  grep --help
+  504  sed '/^selfLink/d' gene.yaml
+  505  sed -i '/^selfLink/d' gene.yaml
+  506  vim gene.yaml 
+  507  sed -i /^selfLink/d gene.yaml
+  508  vim gene.yaml 
+  509  grep -v '^SelfLink' gene.yaml
+  510  grep -v '^selfLink' gene.yaml
+  511  grep -v 'selfLink' gene.yaml
+  512  sed -i /uid/d gene.yaml
+  513  vim gene.yaml 
+  514  sed -i /selfLink/d gene.yaml
+  515  vim gene.yaml 
+  516  sed -i /creationTimestamp/d gene.yaml
+  517  sed -i /f:/d gene.yaml
+  518  sed -i /time/d gene.yaml
+  519  vim gene.yaml 
+  520  sed -i / namespace: petronela-cretu-quotes-dev/d gene.yaml
+  521  sed -i / "namespace: petronela-cretu-quotes-dev"/d gene.yaml
+  522  vim gene.yaml 
+  523  sed -i /lastTriggeredImageID/d gene.yaml
+  524  sed -i /.:/d gene.yaml
+  525  cp gen.yaml gene.yaml
+  526  grep -v 'selfLink' gene.yaml
+  527  grep --help
+  528  grep -vq 'selfLink' gene.yaml > gene.yaml
+  529  cp gen.yaml gene.yaml
+  530  grep -vq 'selfLink' gene.yaml
+  531  sed -i /time/d gene.yaml
+  532  sed -i /lastTriggeredImageID/d gene.yaml
+  533  sed -i /f:/d gene.yaml
+  534  sed -i /creationTimestamp/d gene.yaml
+  535  sed -i /uid/d gene.yaml
+  536  sed -i /selfLink/d gene.yaml
+  537  sed -i /lastTriggeredImage/d gene.yaml
+  538  sed -i /k:/d gene.yaml
+  539  cd
+  540  oc new-project myquotestest
+  541  oc new-app -file=generated/gene.yaml -p APP_GIT_URL=https://github.com/PetronellaPC/DO288-apps -p PASSWORD=mypass
+  542  oc new-app --file=generated/gene.yaml -p APP_GIT_URL=https://github.com/PetronellaPC/DO288-apps -p PASSWORD=mypass
+  543  oc new-app --file=generated/gene.yaml
+  544  oc delete all --all
+  545  oc new-app --file=generated/gene.yaml -p APP_GIT_URL=https://github.com/PetronellaPC/DO288-apps -p PASSWORD=mypass
+  546  oc delete all --all
+  547  oc new-project blah
+  548  oc new-app --file=generated/gene.yaml -p APP_GIT_URL=https://github.com/PetronellaPC/DO288-apps -p PASSWORD=mypass
+  549  oc get pods
+  550  ~/DO288/labs/create-template/populate-db.sh
+  551  oc get route/quotesapi -o jsonpath='{.spec.host}{"\n"}'
+  552  curl quotesapi-blah.apps.eu45.prod.nextcle.com/get.php
+  553  cd DO288-apps/
+  554  git add .
+  555  git commit -m "add my edited template"
+  556  git push
+  557  oc delete all --all
+  558  oc projects
+  559  oc delete project blah
+  560  oc delete project myquotestest 
+  561  oc delete project s2i-project 
+  562  poweroff
+  563  lab-configure
+  564  oc login -u petronela-cretu -p 858b83bb854842439a62
+  565  oc describe pod
+  566  oc describe pod --recursive
+  567  oc explain pod
+  568  oc explain pod --recursive
+  569  oc explain pod --recursive | grep probe
+  570  oc explain pod --recursive | grep liveness
+  571  oc explain pod --recursive > pod.yaml
+  572  vim pod.yaml
+  573  oc explain pod.spec
+  574  oc explain pod.spec > file
+  575  vim file
+  576  oc explain pod.spec.contaner.liveness > file
+  577  oc explain pod.spec.container.liveness
+  578  oc explain pod.spec.containers.liveness
+  579  oc explain pod.spec.containers.livenessprobe
+  580  oc explain pod.spec.containers
+  581  oc explain pod.spec.containers.livenessProbe
+  582  oc explain pod.spec.containers.livenessProbe.httpGet
+  583  oc set probe --help
+  584  lab probes start
+  585  ls
+  586  source /usr/local/etc/ocp4.config 
+  587  oc new-app --as-deployment-config --name probes --build-env npm_config_registry=http://${RHT_OCP4_NEXUS_SERVER}/repository/nodejs  nodejs:12~https://github.com/${RHT_OCP4_GITHUB_USER}/DO288-apps --context-dir probes
+  588  oc get all
+  589  oc logs bc
+  590  oc logs bc/probes
+  591  oc logs -f bc/probes
+  592  oc logs --help
+  593  oc get pods
+  594  oc expose svc probes
+  595  oc get svc
+  596  curl -i probes-${RHT_OCP4_DEV_USER}-probes.${RHT_OCP4_WILDCARD_DOMAIN}/ready
+  597  curl -i probes-${RHT_OCP4_DEV_USER}-probes.${RHT_OCP4_WILDCARD_DOMAIN}/healthz
+  598  oc get route
+  599  curl --help
+  600  curl -i probes-myosproject.apps.eu45.prod.nextcle.com/ready
+  601  curl -i probes-myosproject.apps.eu45.prod.nextcle.com/healthz
+  602  curl -i probes-myosproject.apps.eu45.prod.nextcle.com
+  603  oc set probe dc/probes --liveness --get-url=http://:8080/healthz --initial-delay-seconds=2 --timeout-seconds=2
+  604  oc set probe dc/probes --readiness --get-url=http://:8080/ready --initial-delay-seconds=2 --timeout-seconds=2
+  605  oc describe dc/probes
+  606  oc get dc/probes -o yaml > dc.yaml
+  607  vim dc.yaml 
+  608  oc logs -f dc/probes
+  609  oc get pods
+  610  oc delete probes
+  611  oc delete probes --all
+  612  oc delete --help
+  613  oc delete -l 'probes'
+  614  oc delete pods -l 'probes'
+  615  oc get pods
+  616  DO288/labs/probes/kill.sh 
+  617  vim DO288/labs/probes/kill.sh 
+  618  oc get route
+  619  curl http://probes-myosproject.apps.eu45.prod.nextcle.com/flip?
+  620  vim DO288/labs/probes/kill.sh 
+  621  curl http://probes-myosproject.apps.eu45.prod.nextcle.com/flip?op=kill
+  622  lab-configure
+  623  oc login -u petronela-cretu
+  624  eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee   
+  625  c,ar
+  626  clear
+  627  lab-configure
+  628  oc login -u petronela-cretu
+  629  lab strategy start
+  630  oc new-project strategyproject
+  631  oc new-app --as-deployment-config --name mysql -e MYSQL_USER=test -e MYSQL_PASSWORD=redhat -e MYSQL_DATABASE=testdb --docker-image registry.access.redhat.com/rhscl/mysql-57-rhel7
+  632  oc sttaus
+  633  oc status
+  634  oc logs -f dc/masql
+  635  oc logs -f dc/mysql
+  636  oc get pods
+  637  oc logs -f pod/mysql-1-jq6ww
+  638  oc get dc/mysql -o jsonpath='{.spec.strategy.type}{"\n"}'
+  639  oc get dc/mysql -o jsonpath='{.spec.strategy.type}'
+  640  oc get trigers
+  641  oc get triggers
+  642  oc get --help
+  643  oc triggers --help
+  644  oc --help
+  645  oc explain pod --recursive | grep trigger*
+  646  oc explain dc --recursive | grep trigger*
+  647  oc explain dc --recursive
+  648  oc set triggers dc/mysql --from-config --remove
+  649  oc --help --recursive
+  650  oc explain pv
+  651  oc explain pv --recursive
+  652  vim patchy.yaml
+  653  oc patch --help
+  654  oc patch dc/mysql --patch  '{"spec":{"strategy":{"type":"Recreate"}}}'
+  655  oc patch dc/mysql --type=json  -p='[{"op":"remove", "path": "/spec/strategy/rollingParams"}]'
+  656  ~/DO288/labs/strategy/post-hook.sh
+  657  oc describe dc/mysql | grep -A 3 'Strategy:'
+  658  oc rollout latest dc/mysql
+  659  watch -n 2 oc get pods
+  660  watch --help
+  661  watch man
+  662  man watch
+  663  oc process --help
+  664  oc export --help
+  665  history > cmds.txt
