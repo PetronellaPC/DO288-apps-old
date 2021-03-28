@@ -1,0 +1,203 @@
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  creationTimestamp: "2021-03-27T19:05:35Z"
+  generation: 2
+  labels:
+    app: scale
+    app.kubernetes.io/component: scale
+    app.kubernetes.io/instance: scale
+  managedFields:
+  - apiVersion: apps.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/generated-by: {}
+        f:labels:
+          .: {}
+          f:app: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+      f:spec:
+        f:replicas: {}
+        f:selector:
+          .: {}
+          f:deploymentconfig: {}
+        f:strategy:
+          f:activeDeadlineSeconds: {}
+          f:rollingParams:
+            .: {}
+            f:intervalSeconds: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+            f:timeoutSeconds: {}
+            f:updatePeriodSeconds: {}
+          f:type: {}
+        f:template:
+          .: {}
+          f:metadata:
+            .: {}
+            f:annotations:
+              .: {}
+              f:openshift.io/generated-by: {}
+            f:creationTimestamp: {}
+            f:labels:
+              .: {}
+              f:deploymentconfig: {}
+          f:spec:
+            .: {}
+            f:containers:
+              .: {}
+              k:{"name":"scale"}:
+                .: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:ports:
+                  .: {}
+                  k:{"containerPort":8080,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:protocol: {}
+                  k:{"containerPort":8443,"protocol":"TCP"}:
+                    .: {}
+                    f:containerPort: {}
+                    f:protocol: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:terminationGracePeriodSeconds: {}
+    manager: oc
+    operation: Update
+    time: "2021-03-27T19:05:35Z"
+  - apiVersion: apps.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:template:
+          f:spec:
+            f:containers:
+              k:{"name":"scale"}:
+                f:image: {}
+        f:triggers: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:details:
+          .: {}
+          f:causes: {}
+          f:message: {}
+        f:latestVersion: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:unavailableReplicas: {}
+        f:updatedReplicas: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2021-03-27T19:06:17Z"
+  name: scale
+  namespace: petronela-cretu-manage-deploy
+  resourceVersion: "16570768"
+  selfLink: /apis/apps.openshift.io/v1/namespaces/petronela-cretu-manage-deploy/deploymentconfigs/scale
+  uid: 075df293-c549-4c83-8ee7-e7d77c165e92
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    deploymentconfig: scale
+  strategy:
+    activeDeadlineSeconds: 21600
+    resources: {}
+    rollingParams:
+      intervalSeconds: 1
+      maxSurge: 25%
+      maxUnavailable: 25%
+      timeoutSeconds: 600
+      updatePeriodSeconds: 1
+    type: Rolling
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deploymentconfig: scale
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/petronela-cretu-manage-deploy/scale@sha256:89a5ffc2b65609b5eacb607782cbe6c4423fc79849717e7e147c09597e1b59e7
+        imagePullPolicy: Always
+        name: scale
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        - containerPort: 8443
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  test: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - scale
+      from:
+        kind: ImageStreamTag
+        name: scale:latest
+        namespace: petronela-cretu-manage-deploy
+      lastTriggeredImage: image-registry.openshift-image-registry.svc:5000/petronela-cretu-manage-deploy/scale@sha256:89a5ffc2b65609b5eacb607782cbe6c4423fc79849717e7e147c09597e1b59e7
+    type: ImageChange
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2021-03-27T19:06:16Z"
+    lastUpdateTime: "2021-03-27T19:06:16Z"
+    message: Deployment config has minimum availability.
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2021-03-27T19:06:17Z"
+    lastUpdateTime: "2021-03-27T19:06:17Z"
+    message: replication controller "scale-1" successfully rolled out
+    reason: NewReplicationControllerAvailable
+    status: "True"
+    type: Progressing
+  details:
+    causes:
+    - type: ConfigChange
+    message: config change
+  latestVersion: 1
+  observedGeneration: 2
+  readyReplicas: 1
+  replicas: 1
+  unavailableReplicas: 0
+  updatedReplicas: 1
