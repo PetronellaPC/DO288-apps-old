@@ -1,0 +1,509 @@
+    1  exit
+    2  exit
+    3  dig localhost
+    4  exit
+    5  exit
+    6  ifconfig
+    7  sudo vi /etc/hosts
+    8  exit
+    9  history
+   10  exit
+   11  ll
+   12  exit
+   13  ping -c4 1.1.1.1
+   14  pin google.com
+   15  ping google.com
+   16  clear
+   17  lab-configuure
+   18  lab-configure
+   19  git clone  https://github.com/PetronellaPC/DO288-apps
+   20  ls
+   21  lab deploy-image start
+   22  oc help
+   23  oc whoami
+   24  oc login
+   25  oc whoami
+   26  oc help
+   27  oc whoami --help
+   28  oc whoami --show-console
+   29  oc policy 
+   30  lab deploy-image finish
+   31  lab build-template start
+   32  cd DO288
+   33  cd
+   34  cd DO288-apps/
+   35  git checkout main
+   36  git brances
+   37  git branch -a
+   38  git checkout -b main
+   39  git push -u origin main
+   40  git checkout master
+   41  ls 
+   42  git checkout main
+   43  ls
+   44  cd quotes/
+   45  les get.php
+   46  less get.php
+   47  cat get.php 
+   48  oc get templates-n openshift | grep php | grepmysql 
+   49  oc get templates-n openshift | grep php | grep mysql 
+   50  oc get templates -n openshift | grep php | grep mysql 
+   51  oc new project phpmysql
+   52  oc new-project phpmysql
+   53  s2i
+   54  lab build-template finish
+   55  lab container-build start
+   56  cd
+   57  cd DO288-apps/labs
+   58  cd DO288/labs/container-build/httpd-parent/
+   59  ls
+   60  cat Containerfile 
+   61  cd
+   62  cd -
+   63  ls
+   64  cd
+   65  cd DO288-apps/
+   66  ls
+   67  SOURCE /USR/LOCAL/ETC/OCP4.CONFIG
+   68  source /usr/local/etc/ocp4.
+   69  source /usr/local/etc/ocp4.config 
+   70  PODMAN BUILD --LAYERS=FALSE 
+   71  podman build --layers=false -t do288-apache ./container-build
+   72  LS
+   73  ls
+   74  cd container-build/
+   75  ls
+   76  cat Dockerfile 
+   77  cd ~/DO288-apps/
+   78  ls
+   79  cd ~/DO288-apps/
+   80  https://console-openshift-console.apps.eu46.prod.nextcle.com
+   81  cat DO288/labs/container-build/httpd-parent/Container
+   82  cat ~/DO288/labs/container-build/httpd-parent/Container
+   83  cd
+   84  cat ~/DO288/labs/container-build/httpd-parent/Container
+   85  DO288/labs/container-build/httpd-parent
+   86  cd DO288/labs/container-build/httpd-parent
+   87  ls
+   88  cat Containerfile 
+   89  vim Containerfile 
+   90  cp Containerfile ~/DO288-apps/Dockerfile
+   91  cd 
+   92  cd DO288-apps/
+   93  ls
+   94  podman build --layers=false -t do288-apache ./container-build
+   95  cd ./container-build/src
+   96  cd ..
+   97  cp ./container-build/src src
+   98  cp ./container-build/src src -r
+   99  cat Dockerfile 
+  100  cd
+  101  vim file.txt
+  102  cd -
+  103  ln -s /home/student/file.txt file.txt
+  104  ls
+  105  podman build --layers=false -t do288-apache .
+  106  cd
+  107  ls
+  108  cd -
+  109  cat file.txt 
+  110  ls -l
+  111  ln /home/student/file.txt file.txt
+  112  rm file.txt 
+  113  ln /home/student/file.txt file.txt
+  114  podman build --layers=false -t do288-apache .
+  115  lab container-build start
+  116  lab container-build finish
+  117  lab external-registry start
+  118  ls DO288/labs/external-registry/ubi-sleep
+  119  ls DO288/labs/
+  120  lab external-registry start
+  121  ls DO288/labs/external-registry/ubi-sleep
+  122  ls DO288/labs/
+  123  cd
+  124  ls DO288/labs/
+  125  ls DO288/labs/external-registry/ubi-sleep
+  126  source /usr/local/etc/ocp4.config
+  127  podman login -u ${RHT_OCP4_QUAY_USER} quay.io
+  128  skopeo copy oci:/home/student/DO288/labs/external-registry/ubi-sleep docker://quay.yo/Petronella/ubi-sleep:1.0
+  129  skopeo copy oci:/home/student/DO288/labs/external-registry/ubi-sleep docker://quay.io/Petronella/ubi-sleep:1.0
+  130  skopeo copy oci:/home/student/DO288/labs/external-registry/ubi-sleep docker://quay.io/petronella/ubi-sleep:1.0
+  131  podman searc
+  132  podman search
+  133  podman search quay.io/ubi-sleep
+  134  skopeo inspect docker://quay.io/petronella/ubi-sleep:1.0
+  135  podman run -d --name sleep quay.io/petronella/ubi-sleep:1.0
+  136  podman ps
+  137  podman stop rm sleep
+  138  podman stop && podman rm sleep
+  139  podman stop sleep && podman rm sleep
+  140  podman --help
+  141  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  142  oc new-project ext-regisrty
+  143  oc new-app --name sleep --docker-image quay.io/petronella/ubi-sleep:1.0
+  144  oc status
+  145  oc new-project exercises
+  146  oc new-app --name helloJava https://github.com/PetronellaPC/DO288-apps-old --context-dir=hello-java --loglevel=8
+  147  oc get all
+  148  oc status
+  149  oc new-app --name helloJava https://github.com/PetronellaPC/DO288-apps-old --context-dir=hello-java
+  150  oc new-app --name hellojava https://github.com/PetronellaPC/DO288-apps-old --context-dir=hello-java --loglevel=8
+  151  oc get all
+  152  oc get is hellojava
+  153  oc describe is hellojava
+  154  oc describe bc/hellojava
+  155  oc get bc/hellojava
+  156  oc help
+  157  la 
+  158  clc
+  159  clear
+  160  oc status
+  161  oc get all
+  162  lab-configure 
+  163  oc status
+  164  oc delete all
+  165  oc delete all *
+  166  oc delete all hello*
+  167  oc delete all hellojava
+  168  oc delete --help
+  169  oc delete -all
+  170  oc delete --all
+  171  oc delete --all -l hello*
+  172  oc delete --all -l hellojava
+  173  oc delete --al
+  174  oc delete --all
+  175  oc status
+  176  oc delete
+  177  oc delete --help
+  178  oc delete -- all --help
+  179  oc delete --all --help
+  180  oc delete all --all
+  181  oc status
+  182  oc new-pr
+  183  oc new-project 
+  184  oc new-project exercises
+  185  oc get projects
+  186  oc delete project ext-regisrty 
+  187  oc --help
+  188  oc completion --help
+  189  source <(oc competion bash)
+  190  source <(oc completion bash)
+  191  lab external-registry satrt
+  192  lab external-registry start
+  193  podman login petronella quay.io
+  194  podman login -u petronella quay.io
+  195  skopeo copy oci:/home/student/DO288/labs/external-registry/ubi-sleep docker://quay.io/petronella/ubi-sleep:1.1
+  196  podman search quay.io/ubi-sleep
+  197  clear
+  198  podman run -d --name sleep quoy.io/petronella/ubi-sleep:1.1
+  199  podman run -d --name sleep quay.io/petronella/ubi-sleep:1.1
+  200  oc get pods
+  201  podman ps
+  202  podman logs sleep
+  203  podman exec --help
+  204  podman exec -it sleep /bin/bash
+  205  ps
+  206  podman ps
+  207  podman stop sleep
+  208  podman rm sleep
+  209  oc status
+  210  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep:1.1
+  211  oc create secret generic quayio --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type Kubernetes.io/dockerconfigjson
+  212  oc inspect secret/quayio
+  213  oc get -o yaml secret/quayio
+  214  oc secrets link default quayio --for pull
+  215  oc secrets link --help
+  216  oc get statu
+  217  oc get status
+  218  oc status
+  219  oc get all
+  220  oc get secrets quayio 
+  221  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep:1.1
+  222  oc secrets link default quayio --for pull
+  223  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep:1.1
+  224  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep:1.0
+  225  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep
+  226  podman login -u petronella quay.io
+  227  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep:1.1
+  228  oc secrets link default quayio --for pull
+  229  oc new-app -name sleep --docker-image quay.io/petronella/ubi-sleep:1.1
+  230  oc create secret generic quayio --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type Kubernetes.io/dockerconfigjson --loglevel=8
+  231  oc create secret generic quay --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type Kubernetes.io/dockerconfigjson --loglevel=8
+  232  ${XDG_RUNTIME_DIR}
+  233  echo ${XDG_RUNTIME_DIR}
+  234  oc create secret generic quay --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type Kubernetes.io/dockerconfigjson --loglevel=8 secre
+  235  oc secrets link default quay --for pull
+  236  oc new-app --name sleep --docker-image quay.io/petronella/ubi-sleep:1.1
+  237  oc new-app --name sleep --docker-image quay.io/repository/petronella/ubi-sleep:1.1
+  238  oc new-app --name sleep --docker-image quay.io/petronella/ubi-sleep:1.0
+  239  oc delete secrete quayio
+  240  oc delete secret quayio
+  241  source /usr/local/etc/ocp4.config
+  242  podman pull quay.io/petronella/ubi-sleep:1.0
+  243  oc new-app --name sleep --docker-image quay.io/petronella/ubi-sleep:1.0
+  244  oc status
+  245  oc create secret generic quayio --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type kubernetes.io/dockerconfigjson
+  246  oc secrets link default quayio --for pull
+  247  oc new-app --name sleep --docker-image quay.io/${RHT_OCP4_QUAY_USER}/ubi-sleep:1.0
+  248  oc new-app --name sleep --docker-image quay.io/petronella/ubi-sleep:1.0
+  249  clc
+  250  cl
+  251  clear
+  252  oc get secret quay -o yaml >quay.yaml
+  253  oc get secret quay.io -o yaml >quay.yaml
+  254  oc get secret quayio -o yaml >quay.yaml
+  255  clear
+  256  oc get secret quay -o yaml >quay.yaml
+  257  oc get secret quayio -o yaml >quayio.yaml
+  258  clear
+  259  cat quay
+  260  cat quay.yaml 
+  261  cat quayio.yaml 
+  262  oc create secret generic quayio --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type kubernetes.io/dockerconfigjson
+  263  oc create secret generic quay --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type Kubernetes.io/dockerconfigjson --loglevel=8 secre
+  264  clear
+  265  podman images
+  266  oc new-app --docker-image 3c63b4841913
+  267  oc new-app --docker-image --help
+  268  oc new-app --help
+  269  podman --help
+  270  podman inspect 3c63b4841913
+  271  podman --help
+  272  podman image --help
+  273  podman image list
+  274  podman image list --help
+  275  podman image list --no-trunc
+  276  ls -R | grep 'registry' 2>dev/null
+  277  ls -R | grep 'registry' 2>/dev/null
+  278  cd /
+  279  ls -R | grep 'registry' 2>/dev/null
+  280  ls -R 2>/dev/null | grep 'registry'
+  281  ls -R 2>/dev/null | grep 'registr'
+  282  ls -R 2>/dev/null | grep 'registries'
+  283  vim registries.conf
+  284  ls
+  285  vim etc/containers/registries.conf.d/
+  286  vim etc/containers/registries.d/
+  287  ls -R 2>/dev/null | grep 'registry'
+  288  vim registry.access.redhat.com.yaml
+  289  cat registry.access.redhat.com.yaml
+  290  find -name / 'registry.access.redhat.com.yaml'
+  291  find / --name 'registry.access.redhat.com.yaml'
+  292  find --help
+  293  find / -name 'registry.access.redhat.com.yaml'
+  294  find / -name 'registry.access.redhat.com.yaml' 2>/dev/null
+  295  $find / -name 'registry.access.redhat.com.yaml' 2>/dev/null
+  296  $find / -name 'registry.access.redhat.com.yaml' 2>/dev/null[B
+  297  vim find / -name 'registry.access.redhat.com.yaml' 2>/dev/null
+  298  cat | find / -name 'registry.access.redhat.com.yaml' 2>/dev/null
+  299  cat ${find / -name 'registry.access.redhat.com.yaml' 2>/dev/null}
+  300  cat ({find / -name 'registry.access.redhat.com.yaml' 2>/dev/null)
+  301  cat (find / -name 'registry.access.redhat.com.yaml' 2>/dev/null)
+  302  cat $(find / -name 'registry.access.redhat.com.yaml' 2>/dev/null)
+  303  clear
+  304  oc status
+  305  lab-configure
+  306  oc status
+  307  oc policy add-role-to-user system:image-puller $(oc whoami) -n exercises
+  308  oc new-app --name sleep2 --docker-image quay.io/petronella/ubi-sleep
+  309  oc get endpoints
+  310  oc get status
+  311  oc status
+  312  oc get pods
+  313  oc rsh sleep-7b4f57dfb5-r4rbc env
+  314  oc rsh -- help
+  315  oc rsh --help
+  316  man pipeline
+  317  man pipe
+  318  find / -name 'history'
+  319  find / -name 'history' 2>/dev/null
+  320  find / -name 'bash_history'
+  321  clear
+  322  lab nexus-service start
+  323  cd
+  324  lab nexus-service start
+  325  cd DO288-apps/
+  326  git status
+  327  git add . 
+  328  lab nexus-service start
+  329  rm -r src
+  330  rm file.txt 
+  331  rm Dockerfile 
+  332  git status
+  333  git add .
+  334  git status
+  335  lab nexus-service start
+  336  cd nexus3/
+  337  git checkout main
+  338  ls
+  339  grep VOLUME Dockerfile
+  340  cat Dockerfile 
+  341  less Dockerfile 
+  342  source /usr/local/etc/ocp4.config
+  343  history
+  344  podman build -t nexus3 . --loglevel=6
+  345  podman login -u ${RHT_OCP4_QUAY_USER} quay.io
+  346  skopeo copy containers-storage:localhost/nexus3 docker://quay.io/${RHT_OCP4_QUAY_USER}/nexus3
+  347  skopeo copy containers-storage:localhost/nexus3 docker://quay.io/petronella/nexus3
+  348  echo ${RHT_OCP4_QUAY_USER}
+  349  cp -r ~/DO288/labs/nexus-service/nexus-chart ~/
+  350  cd
+  351  grep -A1 "kind: DockerImage" ~/nexus-chart/templates/imagestream.yaml
+  352  cat nexus-chart/templates/deployment.yaml 
+  353  vim nexus-chart/templates/deployment.yaml 
+  354  ls
+  355  cd /
+  356  ls
+  357  cd
+  358  vim nexus-chart/templates/deployment.yaml 
+  359  oc login -u ${RHT_OCP4_DEV_USER} -p ${RHT_OCP4_DEV_PASSWORD} ${RHT_OCP4_MASTER_API}
+  360  oc new-project ${RHT_OCP4_DEV_USER}-nexus-service
+  361  podman login -u ${RHT_OCP4_QUAY_USER} quay.io
+  362  oc create secret generic quayio --from-file .dockerconfigjson=${XDG_RUNTIME_DIR}/containers/auth.json --type kubernetes.io/dockerconfigjson
+  363  ls
+  364  echo .dockerconfigjson
+  365  echo $.dockerconfigjson
+  366  oc secrets link default quayio --for pull
+  367  echo "nexus3-${RHT_OCP4_DEV_USER}.${RHT_OCP4_WILDCARD_DOMAIN}"
+  368  helm install nexus3 ~/nexus-chart
+  369  vim nexus-chart/templates/deployment.yaml 
+  370  helm install nexus3 ~/nexus-chart
+  371  ls
+  372  oc status
+  373  oc delete all
+  374  oc delete --all
+  375  oc delete all --all
+  376  helm install nexus3 ~/nexus-chart
+  377  oc delete all --all
+  378  helm --help
+  379  help status
+  380  ps | grep helm
+  381  ps
+  382  cd nexus-chart/
+  383  ls
+  384  cd te
+  385  cd templates/
+  386  ls
+  387  vim deployment.yaml 
+  388  helm install nexus31 ~/nexus-chart
+  389  grep 'REPLACE_PVC' .
+  390  grep 'REPLACE_PVC' deployment.yaml 
+  391  grep 'REPLACE_PVC' imagestream.yaml 
+  392  grep 'REPLACE_PVC' pvc.yaml 
+  393  vim pvc.yaml 
+  394  helm install nexus32 ~/nexus-chart
+  395  oc status
+  396  helm --help
+  397  helm uninstall nexus3 ~/nexus-chart
+  398  helm uninstall nexus31 ~/nexus-chart
+  399  helm install nexus3 ~/nexus-chart
+  400  cd
+  401  helm install nexus3 ~/nexus-chart
+  402  cd nexus-chart/
+  403  ls
+  404  less Chart.yaml 
+  405  helm install --help
+  406  echo "nexus3-${RHT_OCP4_DEV_USER}.${RHT_OCP4_WILDCARD_DOMAIN}"
+  407  less Chart.yaml 
+  408  cd templates/
+  409  ls
+  410  vim deployment.yaml 
+  411  cd
+  412  cd DO288
+  413  ls
+  414  cd solutions/
+  415  ls
+  416  cd nexus-service/
+  417  ls
+  418  cd nexus-chart/
+  419  ls
+  420  less Chart.yaml 
+  421  lsss values.yaml 
+  422  less values.yaml 
+  423  less values.yaml cd
+  424  cd
+  425  helm install nexus3 ~/nexus-chart
+  426  helm uninstall nexus3 ~/nexus-chart
+  427  helm install nexus3 ~/nexus-chart
+  428  helm install nexus31 ~/nexus-chart
+  429  oc delete project vfxebb-nexus-service 
+  430  oc new-project vfxebb-nexus-service
+  431  helm install nexus31 ~/nexus-chart
+  432  cd
+  433  ls
+  434  cd nexus-chart/
+  435  cd templates/
+  436  vim pvc.yaml 
+  437  oc delete pvc
+  438  oc delete pvc nexus3
+  439  oc get pvc
+  440  cd
+  441  podman pull quay.io/petronella/nexus3
+  442  helm install nexus3 ~/nexus-chart
+  443  cd nexus-chart/
+  444  vim values.yaml 
+  445  cd templates/
+  446  vim deployment.yaml 
+  447  cd
+  448  ls
+  449  rm -R nexus-chart/
+  450  ls
+  451  rm -R nexus-chart/
+  452  ls
+  453  helm install nexus3 ~/nexus-chart
+  454  cd nexus-chart/
+  455  ls
+  456  cd templates/
+  457  ls
+  458  rm -R tests/
+  459  cd
+  460  helm install nexus3 ~/nexus-chart
+  461  oc get pods
+  462  oc get pods --help
+  463  oc get pods --help | number
+  464  oc get pods --help |grep number
+  465  oc get pods --help |grep nr
+  466  oc get pods --help |grep many
+  467  kubectl get pods --field-selector=status.phase!=Succeeded,status.Phase!=Failed
+  468  kubectl get pods --field-selector=*
+  469  oc get pods
+  470  oc get rs
+  471* oc get rs|wc -l
+  472  ls
+  473  cd nexus-chart/
+  474  ls
+  475  vim values.yaml 
+  476  oc edit deployment/nexus3
+  477  oc get is
+  478  oc describe is nexus3
+  479  # skopeo copy containers-storage:localhost/nexus3 docker://quay.io/petronella/nexus3
+  480  # oc set triggers deployment/nexus3 --containers nexus3 --from-image=nexus3:latest
+  481  # oc import-image nexus3
+  482  # oc set triggers deployment/nexus3 --containers nexus3 --from-image=nexus3:latest
+  483   oc import-image nexus3
+  484   oc set triggers deployment/nexus3 --containers nexus3 --from-image=nexus3:latest
+  485  oc get pods
+  486  oc get all
+  487  oc delete pods --help
+  488  oc delete pods --field-selector=status.phase=0
+  489  oc get all
+  490  oc delete --help
+  491  oc delete pods --all
+  492  oc get pods
+  493  oc get rs
+  494  oc get is
+  495  oc describe is nexus3
+  496  oc edit deploy/nexus3
+  497  oc rollout pause deploy/nexxxus3
+  498  oc rollout pause deploy/nexus3
+  499  oc delete rs --all
+  500  oc get rs
+  501  oc get deploy
+  502  oc rollout reeeeeeeeeeeeeeeeeeeeeesume deploy/nexus3
+  503  oc rollout resume deploy/nexus3
+  504  oc get rs
+  505  oc get pdos
+  506  oc get pods
+  507  oc get rs
+  508  cd
+  509  history >historyCourse.txt
